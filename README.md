@@ -1,97 +1,220 @@
-<div align="center">
-> **📜 Anteriormente conocido como Forgotten Memories**
->
-> NULLSPACE comenzó su desarrollo bajo el nombre de **Forgotten Memories**, un proyecto que evolucionó con el tiempo hasta convertirse en la experiencia de terror que es hoy. El cambio de nombre representa una nueva etapa en su desarrollo, conservando la esencia y la visión original del juego.
 # NULLSPACE
 
-**You have a weapon. The building has ears.**
+*Una experiencia de terror psicológico en primera persona, ambientada en un inquietante edificio comercial interconectado.*
 
-Single-player · First-person survival horror · In development
+> Despiertas sobre una alfombra húmeda bajo luces fluorescentes parpadeantes. En algún lugar de un edificio imposible, hay una salida esperándote. Restablece la energía, explora las habitaciones y encuentra el camino de regreso. Pero recuerda algo: hay otra cosa que está aprendiendo la distribución del edificio junto contigo.
 
-[![Development: early production](https://img.shields.io/badge/development-early_production-d6c77c?style=flat-square&labelColor=20221e)](STATUS.md)
-[![Engine: Godot 4.7.2](https://img.shields.io/badge/engine-Godot_4.7.2-899e93?style=flat-square&labelColor=20221e)](ARCHITECTURE.md)
-[![Target: Windows and Linux](https://img.shields.io/badge/target-Windows_%2B_Linux-b6b8ae?style=flat-square&labelColor=20221e)](#specifications)
+**NULLSPACE** es un juego de terror atmosférico en primera persona que se centra en la exploración, el sonido, la orientación y la supervivencia. Tu objetivo es sencillo: restablecer los circuitos necesarios y escapar. El edificio, naturalmente, tiene otros planes.
 
-**[Explore the website](https://github.marius4lui.dev/NULLSPACE/)** · [Game design](GAME_DESIGN.md) · [Development status](STATUS.md) · [Discussions](https://github.com/marius4lui/NULLSPACE/discussions)
+---
 
-</div>
+## 📜 Historia del proyecto
 
-[![Early NULLSPACE environment render: empty fluorescent-lit rooms, faded wallpaper and stained carpet](docs/images/environment-preview.png)](https://github.marius4lui.dev/NULLSPACE/)
+**NULLSPACE anteriormente  Forgotten Memories.**
 
-*Early Blender environment render using original project assets. Work in progress.*
+El proyecto comenzó su desarrollo bajo el nombre de **Forgotten Memories** y evolucionó con el tiempo hasta convertirse en la experiencia de terror que es hoy.
 
-Wake up on damp carpet beneath fluorescent lights. Somewhere inside an impossible commercial building, an exit is waiting for power. Choose a difficulty, restore its required Room 1 circuits, and remember your way back.
+El cambio de nombre representa una nueva etapa en el desarrollo del juego, conservando la esencia, el concepto y la visión original del proyecto.
 
-Something else is learning the building with you.
+Forgotten Memories forma parte de la historia de NULLSPACE y de su evolución como proyecto independiente.
 
-## The intended experience
+---
 
-- **One persistent threat.** The Listener is an original creature that follows sight and sound clues, searches, and can lose your trail.
-- **Every shot has a cost.** A compact semi-automatic pistol buys time, but its noise gives away your position. Doors, cover and route choices matter.
-- **A compact connected building.** Roughly 8–12 meaningful rooms: quiet arrival, nested offices, short service/blackout and the return to the exit.
-- **Architecture you almost remember.** Offset openings, sparse landmarks and tactical doors help you navigate and escape.
-- **A complete escape.** Easy uses one switch, Medium the two-switch baseline, and Hard/Nightmare add a third local circuit with a short latch or marked-fuse step. Every mode returns to the same exit and remains possible without ammunition.
+*Renderizado inicial del entorno creado en Blender utilizando recursos originales del proyecto. Desarrollo en progreso.*
 
-These describe the intended game; implementation is still in early production.
+## 🎮 La experiencia
 
-## Built with GPT-6 Astra
+- **Una amenaza persistente:** El Oyente es una criatura original que rastrea pistas visuales y auditivas, busca tu ubicación y puede perder tu rastro.
+- **Cada disparo tiene un precio:** Una pistola semiautomática compacta puede darte tiempo para escapar, pero el ruido revela tu posición.
+- **Un entorno interconectado:** Explora aproximadamente entre 8 y 12 habitaciones funcionales, incluyendo oficinas, áreas de servicio y rutas que conducen de regreso a la salida.
+- **Una arquitectura inquietante:** Las aberturas descentradas, la escasez de puntos de referencia y las puertas estratégicas convierten la orientación en parte del desafío.
+- **Varios niveles de dificultad:** Fácil, Medio, Difícil y Pesadilla modifican los requisitos para restablecer los circuitos sin introducir niveles separados.
+- **Más que combate:** Las puertas, la cobertura, la elección de rutas y la administración de munición influyen en tus posibilidades de sobrevivir.
 
-NULLSPACE is an AI-developed game created with **GPT-6 Astra through Codex**, under the direction of [marius4lui](https://github.com/marius4lui). One agent now handles implementation, original asset creation and practical in-engine checks, reusing the existing work. This repository follows the development of the game, from its first rooms to a playable release.
+La experiencia descrita todavía está en desarrollo. Algunas características y mecánicas podrían no estar completamente implementadas en la versión actual.
 
-## Specifications
+## 👁️ La amenaza
 
-| | Target |
-| :--- | :--- |
-| Engine | Godot 4.7.2 · Forward+ |
-| Asset pipeline | Blender 5.2.1 LTS · original models, materials and animation |
-| Platforms | Linux laptop first; Windows x86-64 cross-export when available |
-| Game | 10–15 minutes · approximately 8–12 connected rooms · two switches |
-| Equipment | One semi-automatic pistol · battery-free flashlight |
-| Threat | The Listener · approximately 2.3 m tall |
-| Performance | Laptop profile measured on Radeon 660M; see [actual measurements](PERFORMANCE.md), no other-hardware guarantee |
+### El Oyente
 
-Minimum requirements are not established yet. Performance will be reported with the actual laptop, resolution and profile. A Windows cross-export is not native Windows validation.
+Algo se mueve por el edificio y reacciona a las pistas que dejas a tu paso.
 
-## Current state
+El Oyente está diseñado para detectar señales visuales y auditivas. Puede seguir pistas, buscar tu ubicación y perderte de vista.
 
-**[Download v0.3.1 — Windows Start Hotfix](https://github.com/marius4lui/NULLSPACE/releases/tag/v0.3.1)** · Fixes new campaigns opening on the Resume screen in Windows · Includes the complete v0.3 game · Unstable prerelease.
+Sobrevivir depende de comprender tu entorno, controlar el ruido y saber cuándo avanzar.
 
-Android adds touch movement/look/fire/actions, mobile graphics profiles and pause/resume handling. The signed debug preview is built from the local offline template. Physical installation, real-device controls/audio/performance and full runs remain unverified; see [Android build and limitations](tools/android/README.md). Existing main difficulty modes and website changes are preserved. This is not the final Android release.
+## ⚡ Jugabilidad
 
-The public `main` branch contains the integrated two-switch game. The `feat/difficulty-room1` branch adds four fixed pre-start modes without adding levels, enemies, weapons or an inventory framework. **This is not a finished or fully optimized release.** Easy has a complete native exported-game run; the other modes complete in actual-scene automation but still need full native endings and listening review. Windows is cross-exported, not natively tested.
+Tu objetivo principal es restablecer los circuitos eléctricos necesarios y llegar a la salida.
 
-## Run and build from source
+La cantidad de interacciones necesarias depende de la dificultad seleccionada:
 
-With Godot **4.7.2 stable** and its matching export templates installed:
+| Dificultad | Objetivo |
+|---|---|
+| Fácil | Activar un interruptor |
+| Medio | Restablecer el sistema básico de dos interruptores |
+| Difícil | Restablecer los circuitos necesarios y un circuito local adicional |
+| Pesadilla | Restablecer los circuitos necesarios y completar un objetivo local adicional |
 
-```sh
+Las dificultades Difícil y Pesadilla incorporan un circuito local adicional que requiere accionar un pestillo durante un breve intervalo o encontrar un fusible marcado.
+
+Todas las dificultades conducen a la misma salida. Se pretende que sea posible completar el juego incluso sin munición.
+
+## 🛠️ Tecnología
+
+| Componente | Tecnología |
+|---|---|
+| Motor de videojuegos | Godot 4.7.2 |
+| Renderizado | Forward+ |
+| Recursos 3D | Blender 5.2.1 LTS |
+| Modelado y animación | Recursos originales del proyecto |
+| Plataforma principal de desarrollo | Linux |
+| Plataforma adicional | Windows x86-64 |
+| Android | Versión preliminar experimental |
+
+La versión para Windows se genera mediante una compilación cruzada desde el entorno de desarrollo y todavía no ha sido validada mediante pruebas nativas en Windows.
+
+Los requisitos mínimos del sistema aún no están establecidos.
+
+Los informes de rendimiento deben interpretarse teniendo en cuenta el hardware probado, la resolución y la configuración gráfica utilizada.
+
+## 🚧 Estado del desarrollo
+
+**Versión actual:** [v0.3.1, corrección del inicio en Windows](https://github.com/marius4lui/NULLSPACE/releases/tag/v0.3.1)
+
+Esta versión corrige un problema relacionado con la creación de nuevas partidas desde la pantalla de reanudación en Windows e incluye el juego completo de la versión v0.3.
+
+El proyecto continúa siendo una versión preliminar inestable.
+
+### Limitaciones actuales
+
+- La dificultad Fácil cuenta con una partida completa probada mediante una exportación nativa del juego.
+- Los demás niveles de dificultad se han completado mediante pruebas automatizadas en escenas reales, pero todavía requieren partidas completas adicionales en versiones nativas y pruebas auditivas.
+- La versión para Windows se ha generado mediante compilación cruzada, pero no se ha probado de forma nativa.
+- La compatibilidad con Android continúa siendo experimental.
+- La instalación en Android, los controles táctiles, el audio, el rendimiento en dispositivos físicos y las partidas completas todavía no han sido verificados.
+
+La rama pública `main` contiene la versión integrada del juego con dos interruptores.
+
+La rama `feat/difficulty-room1` incorpora cuatro modos de dificultad predefinidos sin añadir nuevos niveles, enemigos, armas ni un sistema de inventario.
+
+### 📱 Versión preliminar para Android
+
+La versión experimental para Android incorpora:
+
+- Controles táctiles para el movimiento y la cámara.
+- Acciones táctiles para disparar e interactuar.
+- Perfiles gráficos adaptados a dispositivos móviles.
+- Gestión de pausas y reanudaciones.
+
+La versión de depuración firmada utiliza la plantilla local sin conexión. No se trata de una versión definitiva para Android.
+
+Consulta la [documentación de compilación y las limitaciones de Android](https://github.com/marius4lui/NULLSPACE/blob/main/tools/android/README.md) para obtener más información.
+
+## 🚀 Instalación y ejecución
+
+### Requisitos
+
+- Godot 4.7.2 estable.
+- Las plantillas de exportación correspondientes de Godot para generar compilaciones.
+- Git.
+- Bash para utilizar el script de compilación proporcionado.
+
+### 1. Clonar el repositorio
+
+```bash
 git clone https://github.com/marius4lui/NULLSPACE.git
 cd NULLSPACE
+```
+
+### 2. Importar el proyecto
+
+```bash
 godot --editor --path game --import --quit
+```
+
+### 3. Ejecutar el juego
+
+```bash
 godot --path game
+```
+
+### 4. Compilar para Linux
+
+```bash
 bash tools/build.sh linux
+```
+
+Después de completar la compilación, ejecuta el archivo generado:
+
+```bash
 ./build/linux/nullspace.x86_64
 ```
 
-For an official portable Godot binary, set `NULLSPACE_GODOT_BIN` to that executable when invoking `tools/build.sh`. Use `windows` or `all` instead of `linux` for cross-exports. Production assets are checked in; Blender is not required to reproduce a game export. Source asset generators live under `tools/art/` and use the retained originals under `art/source/`.
+### Compilaciones para otras plataformas
 
-Controls: WASD, mouse, Shift sprint, Ctrl crouch, F flashlight, E interact, left mouse fire, R reload, Escape pause. Settings cover audio, mouse/invert/FOV, display, VSync/FPS cap and reduced motion/flashes. See [playtest instructions](docs/PLAYTEST.md), [credits](CREDITS.md) and [licences/notices](LICENSES.md). Linux is the tested platform; Windows export is not native validation.
+Utiliza `windows` en lugar de `linux` para generar una compilación para Windows, o utiliza `all` para compilar todos los destinos compatibles configurados en el proyecto.
 
-## Explore and contribute
+Si utilizas una versión portátil del ejecutable de Godot, configura la variable de entorno `NULLSPACE_GODOT_BIN` con la ruta de ese ejecutable antes de iniciar el script de compilación.
 
-| Looking for… | Start here |
-| :--- | :--- |
-| The world, creature and combat | [Game design](GAME_DESIGN.md) · [Art direction](ART_DIRECTION.md) |
-| Technical decisions | [Architecture](ARCHITECTURE.md) · [Decision log](DECISIONS.md) |
-| Current work and limitations | [Status](STATUS.md) · [Issues register](ISSUES.md) · [Next production steps](docs/NEXT_PRODUCTION_ACCEPTANCE.md) |
-| Website source and local preview | [`site/`](site/) · [Website guide](docs/WEBSITE.md) |
-| A bug report or suggestion | [Open an issue](https://github.com/marius4lui/NULLSPACE/issues/new/choose) · [Join a discussion](https://github.com/marius4lui/NULLSPACE/discussions) |
-| A contribution or security report | [Contributing](CONTRIBUTING.md) · [Security](SECURITY.md) |
+No necesitas Blender para ejecutar una versión ya compilada del juego. Los recursos de producción y sus generadores se mantienen en los directorios de código fuente del proyecto.
 
-Original production assets are being created for NULLSPACE, with editable sources and generation/export records. No downloaded game-content packs are used. The raw beta is available; no final release date has been announced.
+## 🎮 Controles
 
-<div align="center">
+| Acción | Control |
+|---|---|
+| Moverse | WASD |
+| Mirar alrededor | Ratón |
+| Correr | Shift |
+| Agacharse | Ctrl |
+| Encender o apagar la linterna | F |
+| Interactuar | E |
+| Disparar | Botón izquierdo del ratón |
+| Recargar | R |
+| Pausar | Escape |
 
-**[Enter NULLSPACE →](https://github.marius4lui.dev/NULLSPACE/)**
+Las opciones de configuración incluyen audio, sensibilidad e inversión del ratón, campo de visión, opciones de pantalla, VSync, límites de FPS y reducción del movimiento o de los destellos.
 
-</div>
+Consulta también la [guía de pruebas del juego](https://github.com/marius4lui/NULLSPACE/blob/main/docs/PLAYTEST.md).
+
+## 📚 Documentación del proyecto
+
+Explora el diseño del juego, las decisiones técnicas, el progreso del desarrollo y las pautas para contribuir.
+
+| Recurso | Descripción |
+|---|---|
+| [Diseño del juego](https://github.com/marius4lui/NULLSPACE/blob/main/GAME_DESIGN.md) | Jugabilidad, mundo, criaturas y combate |
+| [Dirección artística](https://github.com/marius4lui/NULLSPACE/blob/main/ART_DIRECTION.md) | Estilo visual y objetivos artísticos |
+| [Arquitectura](https://github.com/marius4lui/NULLSPACE/blob/main/ARCHITECTURE.md) | Arquitectura técnica |
+| [Registro de decisiones](https://github.com/marius4lui/NULLSPACE/blob/main/DECISIONS.md) | Decisiones técnicas documentadas |
+| [Estado del proyecto](https://github.com/marius4lui/NULLSPACE/blob/main/STATUS.md) | Progreso actual del desarrollo |
+| [Registro de incidencias](https://github.com/marius4lui/NULLSPACE/blob/main/ISSUES.md) | Problemas conocidos y limitaciones |
+| [Plan de producción](https://github.com/marius4lui/NULLSPACE/blob/main/docs/NEXT_PRODUCTION_ACCEPTANCE.md) | Próximas tareas de desarrollo |
+| [Documentación del sitio web](https://github.com/marius4lui/NULLSPACE/blob/main/docs/WEBSITE.md) | Código del sitio y vista previa local |
+| [Créditos](https://github.com/marius4lui/NULLSPACE/blob/main/CREDITS.md) | Créditos del proyecto |
+| [Licencias](https://github.com/marius4lui/NULLSPACE/blob/main/LICENSES.md) | Licencias y avisos legales |
+
+## 🤝 Contribuciones
+
+Los informes de errores, las sugerencias y las contribuciones técnicas ayudan a mejorar el proyecto.
+
+- [Informar de un error o sugerir una mejora](https://github.com/marius4lui/NULLSPACE/issues/new/choose)
+- [Participar en las discusiones del proyecto](https://github.com/marius4lui/NULLSPACE/discussions)
+- [Consultar las pautas de contribución](https://github.com/marius4lui/NULLSPACE/blob/main/CONTRIBUTING.md)
+- [Consultar la política de seguridad](https://github.com/marius4lui/NULLSPACE/blob/main/SECURITY.md)
+
+## 🎨 Recursos originales
+
+NULLSPACE utiliza recursos de producción originales. Los archivos fuente editables y los registros de generación y exportación se mantienen como parte del proyecto.
+
+No se utilizan paquetes de contenido descargados.
+
+## 📌 Información sobre el lanzamiento
+
+NULLSPACE está disponible actualmente como una versión preliminar inestable.
+
+Todavía no se ha anunciado una fecha de lanzamiento definitiva. Las características, la compatibilidad con plataformas, el rendimiento y los sistemas de juego pueden cambiar durante el desarrollo.
+
+---
+
+**Restablece la energía. Aprende cómo funciona el edificio. Encuentra la salida.**
