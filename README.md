@@ -1,5 +1,7 @@
 <div align="center">
-
+> **📜 Anteriormente conocido como Forgotten Memories**
+>
+> NULLSPACE comenzó su desarrollo bajo el nombre de **Forgotten Memories**, un proyecto que evolucionó con el tiempo hasta convertirse en la experiencia de terror que es hoy. El cambio de nombre representa una nueva etapa en su desarrollo, conservando la esencia y la visión original del juego.
 # NULLSPACE
 
 **You have a weapon. The building has ears.**
