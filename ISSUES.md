@@ -1,0 +1,55 @@
+# Issues
+
+v0.3 integration: Listener death and Android preferences/layout/input combined;
+minimum-gated touch skip and checkpoint restart pass. All671 automated assertions
+and three clock probes pass, with two successful full Linux export runs from main1700f31.
+No new blocking regression found in the exercised scenarios. Existing Android
+template/device, touch-fixture shutdown warning, listening and first-play duration
+limits remain open. [Release audit](evidence/releases/v0.3/RELEASE.md).
+
+Listener death scoped update: wall-reaching arms, blood-off red tint, oversized
+blood and pre-death menu camera reset were found and corrected in this branch.
+Rendered matrix176 / edges79 and final headless death176/edges79/difficulty42 pass;
+final exported source7371e47 integrates main4250b49 and completes two fresh-start
+Medium routes after the last gameplay change. Fallback Restart also retains difficulty.
+Actual death/checkpoint restart/settings persistence also operated. Detailed
+scenarios, original failures and limitations: [report](evidence/listener-death/REPORT.md).
+No known blocking defect remains in this feature's exercised scenarios. Audio
+listening and native Windows remain unverified; general game duration/pacing
+issues below are not resolved by this scoped feature. Older0/2 entries below
+describe the pre-feature baseline, not these two later functional runs.
+Android scope 2026-09-08: ANDROID-001 open — no connected physical device; install/update, real multitouch/audio/thermal and final runs cannot yet be accepted. ANDROID-002 active — export and touch integration regression checks in progress. Existing DURATION-001 remains open; porting alone does not complete the approved game.
+
+Current GOAL_CONTRACT.md governs. No complete playable game/zero-defect claim. Full prior register and failures are archived and remain in evidence.
+
+| ID | State | Actual risk / next action |
+|---|---|---|
+| DIFFICULTY-001 | Corrected and covered | Four fixed Room 1 profiles now persist through the existing checkpoint. The initial Easy ending was rejected by the old two-switch schema; mode-aware ending validation corrected it and 42/42 actual-scene checks now cover selection, presentation values, exact objectives, death/restart and ending. |
+| QA-DIFFICULTY-001 | Open, draft-PR limitation | The exported Linux game has complete Easy and Medium runs through death/restart and ending, Hard's full latch/relay action and Nightmare's fuse pickup. Automated actual-scene runs complete all four modes, but native Hard/Nightmare start-to-ending runs and subjective audio listening were not completed. |
+| GAME-001 | Corrected, room/player block only | Coordinator now connects original room/player/light/pause/save. Native operation and targeted checks in evidence/section/solo-a/. Does not imply combat or complete game. |
+| GAME-002 | Complete-flow implementation operated, acceptance open | solo-e/native-01 reaches both physical switches, safe Continue and returned exit/credits in the same map. Scripted objective risks pass both orders. Not a release or first-run duration claim. |
+| ENGINE-001 | Corrected, bounded native verification | Original twelve self-list.h:46 errors retained in native-01. Scene now acknowledges restore on process_frame. Native-02 four real Continue restores, doors and return/ending produced no engine/script errors; usual isolated X input-method warning remains. |
+| DURATION-001 | Open, substantial content/pacing risk | Known-route native diagnostic reached ending at 74.78 simulation seconds, with inspection pauses and one Continue. It is not a first-player exploration run and cannot prove the required 10–15 minutes. Validate real exploration; no timer/wait/empty-route padding. |
+| VISUAL-001 | Specific corrections visually verified; remaining polish open | native-02 03/04 show no detached flashlight/viewmodel shadow and dark-room gun response; 05/06/09 show sealed service/exit headers. Full-resolution images opened. Clearer cabinet lettering and new injury feedback still need close-up/actual hit inspection. |
+| GUN-001 | Specific clipping corrected; broader polish open | solo-c/native-03 07/08 show close-wall tuck and fresh restore pose. Native hit/stagger/retreat exercised. First-use spikes/final animation/gun-feel remain to review on full map. |
+| DOOR-001 | Corrected gap and targeting | Sealed collider/astragal closes ray gap; doorway-only area simplifies closing. Native opens/closes, Listener reopens, shots interrupt, player recloses. 13 physical checks pass. |
+| AI-DOOR-002 | Corrected, bounded verification | Original unarmed-export-01 pins at open west leaf for >7s; failure retained. Actual-corner fixture now passes: geometry-only free-tip detour clears the leaf, old clue unchanged, hidden player unseen (door15 / Listener12). door-detour-native-01 passes the west doorway and pursues into the office; two deaths and checkpoint restarts precede zero-ammo ending. That native route did not trigger the exact detour, so its direct proof remains the physical fixture, not a claimed native detour event. Fresh exported evasion still due. |
+| VFX-001 | Corrected, bounded native verification | Physics verifies leaf parent/movement/restore. solo-e/native-02 05 shows fired mark on closed service leaf; 06 opens that door without floating central mark, 07 recloses with mark back on leaf (paused overlay). All opened. |
+| M4-001 | Open, visual quality risk | Cove repair inspected; wallpaper too uniform. Inspect actual game and fix concrete defects. No numeric gate. |
+| M4-002 | Partially verified, full map open | Current low-profile original room at 1920×1080 (75% internal scale) measured approximately 16.65ms frame p50 / 16.85ms p95 in five initial 5s windows, GPU last samples 10.90–11.73ms. SSAO/SSIL off, two shadowed fixtures, 60 FPS cap. Single room only; encounter/map measurement remains. |
+| UI-001 | Corrected, native export retest | Direct DisplayServer resize left viewport cropped; Window.size/mode now synchronizes it. Export fee2059 1920→1280 native screenshot/input retest passed. Popup focus errors avoided with concrete cycling choice buttons. |
+| PERF-001 | First-shot cause mitigated; full-map check open | Uncaptured fresh-clone export reproduced311ms first shot. Existing effect meshes/materials/instances now prepared at scene load. Two identical uncaptured native reruns max31.19/32.34ms, p95~17.07ms. Export/full-map benchmark still due; no foreign-hardware claim. |
+| VFX-002 | Corrected and inspected | prewarm-native-01/02 exposed metre-sized billboard impact squares. Keep particle scale and radial alpha mask; prewarm-native-02/02 now shows small sparks, 03/04 retained mark/open door. Failed images retained. |
+| M11A-001 | Core integrated, final presentation open | Original rig/skin plus four needed clips run in actual scene. Broken child transforms corrected and native motion opened. Full-map silhouette/animation/encounter polish remains. |
+| QA-002 | Open, listening limitation | Runtime cannot listen to audio. Capture/metrics do not prove heard quality; document/use user help, continue gameplay. |
+| QA-SAVE-001 | Test isolation corrected; earlier overwrite not recovered | Direct section scene suites used normal user://saves before this correction; the fresh-checkout escape test overwrote primary/backup with test snapshots. Surviving files secured privately at /home/marius/.codex-work/nullspace-save-audit.N8X8C2/. No restoration claimed. Five suites now reuse core's temporary-directory pattern for saves/preferences; all89 existing checks pass and normal primary/backup hashes remain unchanged. Native QA profiles were already isolated. No evidence establishes whether older personal progress existed. |
+| QA-006 | Corrected for current room/player, later flow open | New export process native-cold-06 reused QA-only data through env: saved 1280×720 applied, Continue enabled, safe Arrival with lights off restored. Actual screenshots opened. Future pistol/objective checkpoints still require coverage. |
+| GOAL-001 | Non-gameplay tool limit | Stored old goalusageLimited; exposed API cannot edit/resume. Not falsely completed; current repo contract authoritative. |
+| QA-001 | Non-blocking native Windows gap | Templates permit cross-export; no native Windows host. Disclose, not a Linux completion blocker. |
+| IP-001 | Documented naming risk | Other games use NULLSPACE (existing research I). User name retained, no trademark clearance claimed. |
+
+Removed by scope change, NOT fixed: ENV-003discrete-GPU certification; GOV-001former root/process discrepancy; DESIGN-00256room graph; shotgun/third relay/phase/director/shifting geometry/17clips/font/numeric/independent-agent requirements. Their historical records remain.
+
+Previously corrected native input/capture/exit and core storage/time defects keep exact historical evidence; no new proof inferred. Worker quota availability is no longer a dependency, no reset or guarantee. Final full successful runs0/2.
+
+f30b31e unarmed-export-02 now reaches ending without death/restore: Service18.35s, Office39.98s, escape54.33s, one55-damage hit, no pistol/ammo. This verifies an actual zero-ammo route after the door correction, not first-play pacing or all AI situations. Full-map uncaptured windows p50 16.646–16.692ms /p95 16.917–17.896ms /max33.506ms on the documented Laptop profile. First-play/listening feedback requested; no GPU preview left running.
